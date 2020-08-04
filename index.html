@@ -65,12 +65,10 @@
         var displayInput = document.getElementById("display-number");
         displayInput.value = displayInput.value + x;  
     }
-
     function hideNotifySection (){
         document.getElementById("wrong-pin").style.display = 'none';
         document.getElementById("right-pin").style.display = 'none'; 
      }
-  
     function backspace(){
         var backArrow = form.display.value;
          form.display.value = backArrow.substring( 0, backArrow.length-1);
@@ -85,7 +83,6 @@
         clearDisplay();
         hideNotifySection ();
        });
-
     document.getElementById("generate-pin").addEventListener("click", function(){
         var randomNumber = Math.floor(Math.random() * 9000 + 1000);
         var fourDigits = document.getElementById("random-number");
@@ -93,7 +90,6 @@
         clearDisplay();
         hideNotifySection ();
     });
-
     document.getElementById("submit-button").addEventListener("click", function(){
         let fourDigitsNum = document.getElementById("random-number");
         let displayNumber = document.getElementById("display-number");
@@ -104,7 +100,7 @@
             document.getElementById("wrong-pin").style.display = 'block';  
         }
     })
-     
+    
     </script>
 </body>
 </html>
